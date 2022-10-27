@@ -24,7 +24,7 @@ int SGX_CDECL main(int argc, char *argv[])
 
     sgx_status_t ret = SGX_ERROR_UNEXPECTED;
 
-    int untrusted_x = 123456789;
+    int untrusted_x = 987654321;
 
     // initialize enclave
     ret = sgx_create_enclave(ENCLAVE_FILENAME, SGX_DEBUG_FLAG, NULL, NULL, &global_eid, NULL);
@@ -45,8 +45,8 @@ int SGX_CDECL main(int argc, char *argv[])
     // destroy the enclave
     sgx_destroy_enclave(global_eid);
 
-    printf ("X (trusted)  : %d\n", trusted_x);
-    printf ("X (untrusted): %d\n", untrusted_x);
+    printf ("trusted   value  : %d\n", trusted_x);
+    printf ("untrusted value  : %d\n", untrusted_x);
 
     return 0;
 }
