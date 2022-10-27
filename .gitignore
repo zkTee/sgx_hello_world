@@ -1,0 +1,7 @@
+*.so
+Enclave/Enclave_t.*
+Enclave/Enclave.o
+App/Enclave_u.*
+.config_HW_DEBUG_x64
+app
+App.o

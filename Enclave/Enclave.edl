@@ -1,0 +1,10 @@
+enclave {
+    trusted {
+        public int trusted_function(void);
+    };
+
+    untrusted {
+        void ocall_app_keyinput([in, string] const char *str);
+    };
+
+};
